@@ -86,3 +86,161 @@ select {
     --slightly-transparent-white-mainP: hsla(0, 0%, 100%, 0.75); /*(main paragraph)*/
     --slightly-transparent-white-statH: hsla(0, 0%, 100%, 0.6); /*(stat headings)*/
 }
+
+body{
+    background-color: var(--very-dark-blue);
+    color: white;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+h1, h2{
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    text-align: center;  
+    line-height: 1.2;  
+    margin-bottom: 1rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.col{
+    flex-direction: column;
+}
+
+.media-switcher{
+    display: block;
+}
+
+.container{
+    width: 90%;
+    max-width: 400px;
+    margin-inline: auto;
+    background-color: var(--dark-desaturated-blue);
+    border-radius: 10px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-image-container{
+    background-color: var(--soft-violet);
+    border-radius: 10px 10px 0 0;
+}
+
+.mobile-image{
+    border-radius: 10px 10px 0 0;    
+    opacity: .5;
+}
+
+.info-content{
+    width: 85%;
+    margin: 2rem auto;
+}
+
+.info-content span{
+    color: var(--soft-violet);
+}
+
+.info-content p{
+    text-align: center;
+    color: var(--slightly-transparent-white-mainP);    
+}
+
+.stats-info{    
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stats-info p{
+    font-size: .9rem;
+}
+
+.uppercase{
+    text-transform: uppercase;
+    color: var(--slightly-transparent-white-statH);
+}
+
+.desktop-image-container{
+    background-color: var(--soft-violet);
+    border-radius: 0 10px 10px 0; 
+    display: none;
+}
+
+.desktop-image{
+    border-radius: 0 10px 10px 0;    
+    opacity: .5;
+    width: 100%;
+}
+
+.attribution{
+    color: var(--slightly-transparent-white-statH);
+}
+
+.attribution a{
+    text-decoration: none;
+    color: var(--slightly-transparent-white-statH);
+}
+
+.attribution a:hover{
+    color: var(--soft-violet);
+}
+
+@media (min-width: 1020px) {
+    .media-switcher{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .container{
+        width: 90%;
+        max-width: 1100px;
+    }
+
+    h1{
+        text-align: left;
+    }
+
+    .info-content{
+        margin: 0;
+    }
+
+    .info-content p{
+        text-align: left;
+    }
+
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        padding: 3rem 0 3rem 3rem;
+        justify-content: space-between;
+    }
+
+    .stats-info{
+        flex-direction: row;        
+        margin: 0;
+        gap: 3rem;
+    }
+
+    .mobile-image-container{
+        display: none;
+    }
+
+    .desktop-image-container{
+        display: block;
+        width: 50%;
+    }
+
+    .attribution{
+        text-align: center;
+    }
+}
